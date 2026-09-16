@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NexaConnect CX Africa | Customer Experience & BPO</title>
+
+  <meta name="description"
+        content="NexaConnect CX Africa provides professional customer support, appointment booking, email support, virtual reception and business process outsourcing services from South Africa.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #172033;
+      background: #ffffff;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #061f46;
+      color: white;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .brand span {
+      color: #d9a62e;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #d9a62e;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 85vh;
+      padding: 70px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      background: linear-gradient(135deg, #f8fafc, #edf3fa);
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 54px;
+      color: #061f46;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: #c89521;
+    }
+
+    .hero-text h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #48566a;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero-logo {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-logo img {
+      width: 100%;
+      max-width: 650px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 6px;
+      background: #c89521;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn.secondary {
+      background: #061f46;
+    }
+
+    /* GENERAL SECTION */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      color: #061f46;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #667085;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* SERVICES */
+    #services {
+      background: #f8fafc;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card .icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      color: #061f46;
+      margin-bottom: 12px;
+    }
+
+    /* WHY US */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .why-card {
+      padding: 25px;
+    }
+
+    .why-card h3 {
+      color: #061f46;
+      margin: 12px 0;
+    }
+
+    .why-icon {
+      font-size: 38px;
+    }
+
+    /* MARKETS */
+    .markets {
+      background: #061f46;
+      color: white;
+      text-align: center;
+    }
+
+    .markets h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .market-list {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .market {
+      background: rgba(255,255,255,0.1);
+      padding: 12px 22px;
+      border-radius: 30px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 45px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      color: #061f46;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      margin: 25px 0;
+      font-size: 18px;
+    }
+
+    .contact-info a {
+      color: #061f46;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #03142f;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+      }
+
+      .hero-text h1 {
+        font-size: 39px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      .hero-text h1 {
+        font-size: 34px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="brand">
+      NexaConnect <span>CX Africa</span>
+    </div>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <h1>
+        Connecting Businesses.
+        <span>Elevating Customer Experience.</span>
+      </h1>
+
+      <h2>
+        Customer Experience & Business Process Outsourcing
+      </h2>
+
+      <p>
+        NexaConnect CX Africa provides flexible and professional customer
+        experience solutions to businesses in South Africa and international
+        markets. We help businesses support their customers while they focus
+        on growth.
+      </p>
+
+      <a href="mailto:nexaconnectcxafrica@gmail.com?subject=Business Enquiry"
+         class="btn">
+        Talk To Us
+      </a>
+
+      <a href="#services" class="btn secondary">
+        Our Services
+      </a>
+
+    </div>
+
+    <div class="hero-logo">
+      <img src="nexaconnect-logo.png"
+           alt="NexaConnect CX Africa">
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="section-title">
+      <h2>About NexaConnect CX Africa</h2>
+      <p>
+        Professional customer experience support from Johannesburg,
+        South Africa.
+      </p>
+    </div>
+
+    <div class="about">
+
+      <p>
+        NexaConnect CX Africa is a South African customer experience and
+        business process outsourcing provider supporting local and
+        international businesses.
+      </p>
+
+      <br>
+
+      <p>
+        We provide flexible outsourced solutions designed for businesses
+        that need reliable customer support without the cost and complexity
+        of building a large in-house contact centre.
+      </p>
+
+      <br>
+
+      <p>
+        Our model allows clients to start small and scale their support
+        services as their business grows.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>
+        Practical customer support solutions designed around your business.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="icon">🎧</div>
+        <h3>Customer Support</h3>
+        <p>
+          Professional customer assistance focused on delivering a
+          positive customer experience.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">☎️</div>
+        <h3>Inbound Call Handling</h3>
+        <p>
+          Reliable handling of customer enquiries, requests and
+          general support calls.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">📅</div>
+        <h3>Appointment Booking</h3>
+        <p>
+          Appointment scheduling, confirmations and customer
+          follow-up support.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">✉️</div>
+        <h3>Email Support</h3>
+        <p>
+          Professional management of customer emails and service enquiries.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">👩🏾‍💼</div>
+        <h3>Virtual Reception</h3>
+        <p>
+          A professional first point of contact for businesses that need
+          additional customer-facing support.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">💼</div>
+        <h3>Back-Office Support</h3>
+        <p>
+          Administrative assistance and routine business support to help
+          organisations operate efficiently.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY US -->
+  <section id="why-us">
+
+    <div class="section-title">
+      <h2>Why NexaConnect?</h2>
+      <p>
+        Flexible support built for growing businesses.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="why-icon">🌍</div>
+        <h3>Global Outlook</h3>
+        <p>
+          Supporting businesses in South Africa and international markets.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <h3>Scalable</h3>
+        <p>
+          Start with the support you need and scale as your business grows.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h3>Personal Service</h3>
+        <p>
+          A client-focused approach designed around each business.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">⭐</div>
+        <h3>Customer Focus</h3>
+        <p>
+          Every interaction is centred around creating a positive
+          customer experience.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MARKETS -->
+  <section class="markets">
+
+    <h2>Supporting Businesses Across Markets</h2>
+
+    <p>
+      Based in Johannesburg, South Africa, with a vision to support
+      businesses locally and internationally.
+    </p>
+
+    <div class="market-list">
+      <div class="market">🇿🇦 South Africa</div>
+      <div class="market">🇬🇧 United Kingdom</div>
+      <div class="market">🇺🇸 United States</div>
+      <div class="market">🇦🇺 Australia</div>
+      <div class="market">🌍 International</div>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="contact-box">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        Looking for a flexible customer support partner?
+        Contact NexaConnect CX Africa to discuss your business needs.
+      </p>
+
+      <div class="contact-info">
+
+        <p>
+          📍 Johannesburg, Gauteng, South Africa
+        </p>
+
+        <br>
+
+        <p>
+          📧
+          <a href="mailto:nexaconnectcxafrica@gmail.com">
+            nexaconnectcxafrica@gmail.com
+          </a>
+        </p>
+
+      </div>
+
+      <a href="mailto:nexaconnectcxafrica@gmail.com?subject=NexaConnect CX Africa Business Enquiry&body=Hello NexaConnect CX Africa,%0D%0A%0D%0AI would like to enquire about your services."
+         class="btn">
+        Email Us
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>NexaConnect CX Africa</strong>
+    </p>
+
+    <p>
+      Customer Experience & Business Process Outsourcing
+    </p>
+
+    <p>
+      Johannesburg, Gauteng, South Africa
+    </p>
+
+    <p>
+      © 2026 NexaConnect CX Africa. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
